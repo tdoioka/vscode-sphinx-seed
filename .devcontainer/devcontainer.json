@@ -1,0 +1,17 @@
+{
+    "name": "Sphinx",
+    "context": ".",
+    "dockerFile": "Dockerfile",
+    // Set *default* container specific settings.json values on container create.
+    "settings": {
+        "python.pythonPath": "/usr/local/bin/python",
+        "esbonio.server.enabled": true,
+        "restructuredtext.linter.rstcheck.executablePath": "/usr/local/bin/rstcheck",
+        "editor.bracketPairColorization.enabled": true,
+    },
+    "extensions": [
+        "lextudio.restructuredtext-pack",
+        "ms-vscode.live-server",
+        "tomoki1207.pdf"
+    ]
+}
