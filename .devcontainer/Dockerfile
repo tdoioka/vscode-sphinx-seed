@@ -2,6 +2,7 @@ FROM sphinxdoc/sphinx-latexpdf
 
 RUN apt-get update \
  && apt-get install -y \
+    sudo \
     # for plant uml
     curl \
     default-jre \
@@ -22,3 +23,7 @@ RUN pip install \
     # for plant uml
     sphinxcontrib-plantuml
 
+RUN set -e \
+ && useradd -U -m user -s /bin/bash \
+ && gpasswd -a user sudo \
+ && echo "user:user" | chpasswd
